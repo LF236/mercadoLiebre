@@ -28,13 +28,14 @@ header {
     //font-size: 12px;
     p {
         text-align: center;
-        margin: 20px 0;
+        margin: 20px 0 0 0;
         
     }
 
     nav {
         
         ul {
+            display: none;
             list-style: none;
             li {
                 a {
@@ -54,7 +55,18 @@ header {
             background-color: $celeste;
             padding: 10px;
             border-radius: 10px;
-            margin: 35px 0;
+            margin: 10px 0 20px 0;
+        }
+    }
+    @media (min-width: 361px) {
+        nav {
+            ul {
+                display: block;
+            }
+        }
+
+        .burger-menu {
+            display: none;
         }
     }
 }
@@ -66,19 +78,66 @@ section {
 }
 
 main {
+    width: 90%;
+    margin: auto;
+    font-family: $fontMain;
     section {
         h3 {
             font-size: 24px;
         }
         article {
-            .content-article {
-                p:first-child {
+            margin: 10px 0;
+            .img-article {
+                img {
+                    display: block;
+                }
+            }
+            
+            
+
+            .content-article { 
+                span {
+                    color: $verde;
+                    font-size: 16px;
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid $verde;
+                    background-color: #FFF;
+                    border-radius: 50%;
+                    display: block;
+                }
+               
+                .price {
                     font-size: 18px;
                 }
 
-                p:nth-child(2n), h4 {
+                .discount {
                     font-size: 16px;
+                    color: $verde;
                 }
+
+                h4 {
+                    display: none;
+                    margin-top: 20px;
+                    font-weight: normal;
+                    font-size: 16px;
+                    color: $gris_oscuro;
+                }
+
+                padding: 15px;
+                border-top: 1px solid #ebebeb;
+                background: #fff;
+
+            }
+
+            @media (min-width: 361px) {
+                .content-article {
+                    h4 {
+                        display: block;
+                    }
+                }
+                box-shadow: 0px 0px 10px rgb(100, 100, 100);
             }
         }
     }
@@ -106,6 +165,7 @@ footer {
                 color: $celeste;
                 font-size: 2em;
                 margin-bottom: 10px;
+                
             }
         }
     }

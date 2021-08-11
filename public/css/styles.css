@@ -18,10 +18,11 @@ header {
 
 header p {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 header nav ul {
+  display: none;
   list-style: none;
 }
 
@@ -40,23 +41,83 @@ header .burger-menu span {
   background-color: #1259c3;
   padding: 10px;
   border-radius: 10px;
-  margin: 35px 0;
+  margin: 10px 0 20px 0;
+}
+
+@media (min-width: 361px) {
+  header nav ul {
+    display: block;
+  }
+  header .burger-menu {
+    display: none;
+  }
 }
 
 section img {
   width: 100%;
 }
 
+main {
+  width: 90%;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+
 main section h3 {
   font-size: 24px;
 }
 
-main section article .content-article p:first-child {
+main section article {
+  margin: 10px 0;
+}
+
+main section article .img-article img {
+  display: block;
+}
+
+main section article .content-article {
+  padding: 15px;
+  border-top: 1px solid #ebebeb;
+  background: #fff;
+}
+
+main section article .content-article span {
+  color: #39b54a;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: block;
+}
+
+main section article .content-article .price {
   font-size: 18px;
 }
 
-main section article .content-article p:nth-child(2n), main section article .content-article h4 {
+main section article .content-article .discount {
   font-size: 16px;
+  color: #39b54a;
+}
+
+main section article .content-article h4 {
+  display: none;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (min-width: 361px) {
+  main section article {
+    -webkit-box-shadow: 0px 0px 10px #646464;
+            box-shadow: 0px 0px 10px #646464;
+  }
+  main section article .content-article h4 {
+    display: block;
+  }
 }
 
 footer {
