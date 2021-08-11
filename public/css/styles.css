@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ebebeb;
+}
+
+header {
+  width: 100%;
+  background: #EAC926;
+  font-family: "Roboto", sans-serif;
+}
+
+header p {
+  text-align: center;
+  margin: 20px 0;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header .burger-menu {
+  text-align: center;
+}
+
+header .burger-menu span {
+  font-size: 2em;
+  color: #fff;
+  background-color: #1259c3;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 35px 0;
+}
+
+section img {
+  width: 100%;
+}
+
+main section h3 {
+  font-size: 24px;
+}
+
+main section article .content-article p:first-child {
+  font-size: 18px;
+}
+
+main section article .content-article p:nth-child(2n), main section article .content-article h4 {
+  font-size: 16px;
+}
+
+footer {
+  background: white;
+  margin-top: 40px;
+}
+
+footer section {
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+footer section h3 {
+  font-size: 16px;
+}
+
+footer section p {
+  font-size: 12px;
+}
+
+footer section div span {
+  color: #1259c3;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 12px;
+}
+/*# sourceMappingURL=styles.css.map */
