@@ -12,13 +12,49 @@ body {
 
 header {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #EAC926;
   font-family: "Roboto", sans-serif;
+  padding: 20px;
+}
+
+header .logo {
+  width: 50%;
+  margin-right: 5px;
+}
+
+header form {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header form input {
+  width: 85%;
+}
+
+header form button {
+  display: inline-block;
 }
 
 header p {
   text-align: center;
   margin: 20px 0 0 0;
+  width: 100%;
 }
 
 header nav ul {
@@ -41,12 +77,37 @@ header .burger-menu span {
   background-color: #1259c3;
   padding: 10px;
   border-radius: 10px;
-  margin: 10px 0 20px 0;
 }
 
 @media (min-width: 361px) {
+  header .logo {
+    width: 20%;
+  }
+  header p {
+    width: 43%;
+  }
+  header form {
+    width: 35%;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
   header nav ul {
+    margin-top: 20px;
     display: block;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   header .burger-menu {
     display: none;
@@ -63,8 +124,20 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 main section h3 {
   font-size: 24px;
+  width: 100%;
 }
 
 main section article {
@@ -76,6 +149,7 @@ main section article .img-article img {
 }
 
 main section article .content-article {
+  position: relative;
   padding: 15px;
   border-top: 1px solid #ebebeb;
   background: #fff;
@@ -91,6 +165,9 @@ main section article .content-article span {
   background-color: #FFF;
   border-radius: 50%;
   display: block;
+  position: absolute;
+  right: 20px;
+  top: -15px;
 }
 
 main section article .content-article .price {
@@ -117,6 +194,18 @@ main section article .content-article h4 {
   }
   main section article .content-article h4 {
     display: block;
+  }
+}
+
+@media (min-width: 361px) {
+  main section article {
+    width: 48%;
+  }
+}
+
+@media (min-width: 769px) {
+  main section article {
+    width: 23%;
   }
 }
 
