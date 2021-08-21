@@ -13,6 +13,11 @@ app.get("/", (req, res) => {
     res.sendFile(rutaRaiz);
 });
 
+app.get('/register', (req, res) => {
+    const rutaRegistro = path.resolve(__dirname + '/views/register.html');
+    res.sendFile(rutaRegistro);
+});
+
 app.listen(puerto, () => {
     console.log(`Servidor listo en http://localhost:${puerto}`);
 });

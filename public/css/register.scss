@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//Declaración de variables
+$amarillo: #EAC926;
+$azul: #03264C;
+$celeste: #1259c3;
+$gris_oscuro: #666;
+$gris_claro: #ebebeb;
+$verde: #39b54a;
+$fontMain: 'Roboto', sans-serif;
+
+main {
+    //background: yellowgreen;
+    .form_register {
+        //background: blueviolet;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"],
+        input[type="file"] {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            border: 0;
+            padding: 5px;
+        }
+
+        label {
+            display: flex; 
+            margin: 10px 0;
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+        }
+        
+        .perfilUsuario {
+            display: flex;
+            flex-wrap: wrap;
+            p {
+                width: 100%;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-family: $fontMain;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    }
+}
