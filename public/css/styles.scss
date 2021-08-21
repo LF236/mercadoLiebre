@@ -177,6 +177,8 @@ main {
                     font-weight: normal;
                     font-size: 16px;
                     color: $gris_oscuro;
+
+                    transition: color .3s;
                 }
 
                 padding: 15px;
@@ -184,14 +186,30 @@ main {
                 background: #fff;
 
             }
-
+            transition: all .3s;
             @media (min-width: 361px) {
                 .content-article {
                     h4 {
                         display: block;
+                        color: transparent;
                     }
                 }
-                box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+                &:hover {
+                    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+                }
+                span {
+                    transition: transform .3s;
+                }
+
+                &:hover span {
+                    transform: rotate(-90deg);
+                }
+            }
+            
+            &:hover .content-article h4 {
+               
+               color: $gris_oscuro;
             }
         }
 
@@ -210,6 +228,8 @@ main {
                 width: 23%;
             }
         }
+
+        
     }
 }
 
@@ -242,4 +262,18 @@ footer {
     p {
         font-size: 12px;
     }
+
+    @media (min-width: 361px) {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        section {
+            width: 30%;
+        }
+    }
+    
 }

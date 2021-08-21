@@ -142,6 +142,8 @@ main section h3 {
 
 main section article {
   margin: 10px 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 main section article .img-article img {
@@ -185,16 +187,33 @@ main section article .content-article h4 {
   font-weight: normal;
   font-size: 16px;
   color: #666;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 @media (min-width: 361px) {
-  main section article {
+  main section article .content-article h4 {
+    display: block;
+    color: transparent;
+  }
+  main section article:hover {
     -webkit-box-shadow: 0px 0px 10px #646464;
             box-shadow: 0px 0px 10px #646464;
   }
-  main section article .content-article h4 {
-    display: block;
+  main section article span {
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
   }
+  main section article:hover span {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+main section article:hover .content-article h4 {
+  color: #666;
 }
 
 @media (min-width: 361px) {
@@ -238,5 +257,22 @@ footer section div span {
 
 footer p {
   font-size: 12px;
+}
+
+@media (min-width: 361px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer p {
+    width: 100%;
+    margin: 10px 0;
+  }
+  footer section {
+    width: 30%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

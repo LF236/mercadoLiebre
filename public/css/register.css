@@ -57,4 +57,17 @@ main .form_register .button-form {
   margin: 5px 0;
   border: 0;
 }
+
+main .form_register .borrar {
+  background: red;
+}
+
+main .form_register .enviar {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+main .form_register .enviar:hover {
+  background: #0022AA;
+}
 /*# sourceMappingURL=register.css.map */
