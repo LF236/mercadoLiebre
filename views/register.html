@@ -33,7 +33,7 @@
             
             <ul>
                 <li><a href="/register">Creá tu cuenta<span class="far fa-id-card"></span></a></li>
-                <li><a href="#">Ingresa<span class="fas fa-sign-in-alt"></span></a></li>
+                <li><a href="/login">Ingresa<span class="fas fa-sign-in-alt"></span></a></li>
                 <li><a href="#">Mis Compras <span class="fas fa-shopping-basket"></span></a></li>
             </ul>
         </nav>
@@ -48,9 +48,9 @@
         <!-- Sección para el formulario -->
         <section>
             <form action="/" class="form_register">
-                <input type="text" name="name" id="name" placeholder="Nombre y apellidos">
-                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
-                <input type="email" name="email" id="emain" placeholder="E-mail">
+                <input type="text" name="name" id="name" placeholder="Nombre y apellidos" minlength="8" required>
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" minlength="8" required>
+                <input type="email" name="email" id="email" placeholder="E-mail">
                 <p>Fecha de Nacimiento</p>
                 <input type="date" name="date" id="date">
                 <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
@@ -84,10 +84,10 @@
                 </label>
                 <p>Foto de Usuario<p>
                 <input type="file" name="foto_usuario" id="foto_usuario">
-                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <input type="password" name="password" id="password" placeholder="Contraseña" data-pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$">
                 <input type="password" name="password_repeat" id="password_repeat" placeholder="Confirmar Contraseña">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar Todo">
+                <input type="submit" value="Enviar" class="button-form">
+                <input type="reset" value="Borrar Todo" class="button-form">
             </form>
         </section>
     </main>
